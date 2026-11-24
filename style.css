@@ -13,3 +13,159 @@
 @media(max-width:900px){.nav-links{gap:18px}.feature-layout{gap:45px}.contact-layout{gap:45px}.cars-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.container{width:min(100% - 32px,520px)}.site-header{height:70px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:70px;right:0;left:0;background:#111c24;padding:18px 24px 25px;flex-direction:column;align-items:stretch;gap:15px}.nav-links.open{display:flex}.nav-links .nav-cta{text-align:center}.hero{min-height:610px;background-position:58% center}.hero-overlay{background:linear-gradient(90deg,rgba(8,14,19,.92),rgba(8,14,19,.55))}.hero-content{padding:75px 0}.hero h1{font-size:48px}.hero-copy{font-size:13px}.hero-caption{display:none}.stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}.stats-grid div:nth-child(2){border:0}.stats-grid strong{font-size:22px}.section{padding:70px 0}.section-heading{display:block}.section-heading>p{margin-top:12px}.section-heading h2,.feature-content h2,.contact-copy h2{font-size:36px}.filters{display:grid;grid-template-columns:1fr 1fr}.filters label{min-width:0}.reset-filter{grid-column:1/-1;text-align:right}.cars-grid{grid-template-columns:1fr;gap:16px}.car-image{height:220px}.feature-band{padding:70px 0}.feature-layout{grid-template-columns:1fr;gap:50px}.feature-image{height:310px;margin-left:15px}.experience-badge{width:95px;height:95px;right:-13px}.reviews-grid{grid-template-columns:1fr}.review-card>p{min-height:0}.contact-section{padding:70px 0}.contact-layout{grid-template-columns:1fr;gap:35px}.contact-form{padding:23px}.footer-top{flex-wrap:wrap;gap:10px}.footer-top>p{order:3;width:100%;margin:0}.footer-bottom{gap:8px;flex-direction:column}.whatsapp-float{width:48px;height:48px;bottom:17px;left:17px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* ==============================
+   CAR DETAILS MODAL
+============================== */
+
+.car-card {
+  cursor: pointer;
+}
+
+.car-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+}
+
+.car-modal[hidden] {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: min(750px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  animation: modalAppear 0.25s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #101820;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-image {
+  height: 300px;
+  background: #e5e7e7;
+  overflow: hidden;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-image .photo-placeholder {
+  min-height: 100%;
+}
+
+.modal-info {
+  padding: 28px;
+}
+
+.modal-brand {
+  color: #a9844f;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.modal-info h2 {
+  margin: 5px 0;
+  font-size: 27px;
+  color: #101820;
+}
+
+.modal-price {
+  font-size: 22px;
+  font-weight: 900;
+  color: #a9844f;
+  margin: 10px 0 25px;
+}
+
+.modal-info h3 {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.modal-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.modal-specs div {
+  background: #f6f5f2;
+  padding: 15px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-specs span {
+  font-size: 11px;
+  color: #78818a;
+}
+
+.modal-specs strong {
+  font-size: 14px;
+  color: #101820;
+}
+
+.modal-quote {
+  width: 100%;
+  margin-top: 25px;
+}
+
+@media(max-width: 600px) {
+  .modal-content {
+    max-height: 85vh;
+  }
+
+  .modal-image {
+    height: 210px;
+  }
+
+  .modal-info {
+    padding: 20px;
+  }
+
+  .modal-info h2 {
+    font-size: 22px;
+  }
+
+  .modal-specs {
+    gap: 8px;
+  }
+}

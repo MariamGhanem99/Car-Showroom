@@ -23,7 +23,6 @@
         <a href="#home">الرئيسية</a>
         <a href="#cars">السيارات</a>
         <a href="#about">لماذا نحن</a>
-        <a href="#reviews">آراء العملاء</a>
         <a href="#contact" class="nav-cta">تواصل معنا</a>
       </nav>
     </div>
@@ -42,20 +41,11 @@
         </div>
         <div class="hero-proof">
           <div class="proof-avatars"><span>م</span><span>أ</span><span>س</span></div>
-          <p><strong>+1,200</strong><br>عميل اختارنا بثقة</p>
         </div>
       </div>
       <div class="hero-caption">DRIVE YOUR NEXT CHAPTER</div>
     </section>
 
-    <section class="quick-stats">
-      <div class="container stats-grid">
-        <div><strong>+150</strong><span>سيارة متاحة</span></div>
-        <div><strong>+1,200</strong><span>عميل سعيد</span></div>
-        <div><strong>10</strong><span>سنوات من الخبرة</span></div>
-        <div><strong>24/7</strong><span>دعم ومساعدة</span></div>
-      </div>
-    </section>
 
     <section class="section cars-section" id="cars">
       <div class="container">
@@ -89,7 +79,6 @@
         <div class="feature-image">
           <!-- استبدل هذا العنصر بصورة صالة العرض أو سيارة -->
           <div class="image-placeholder"><span>مساحة صورة رئيسية</span><small>أضف صورة صالة العرض أو سيارة هنا</small></div>
-          <div class="experience-badge"><strong>10+</strong><span>سنوات<br>من الخبرة</span></div>
         </div>
         <div class="feature-content">
           <p class="eyebrow"><span></span> تجربة شراء مختلفة</p>
@@ -98,25 +87,11 @@
           <div class="features-list">
             <div><span class="feature-icon">✓</span><div><strong>سيارات مختارة بعناية</strong><small>جودة وفحص وشفافية في كل التفاصيل.</small></div></div>
             <div><span class="feature-icon">◇</span><div><strong>أسعار واضحة ومنافسة</strong><small>تفاصيل كاملة تساعدك على اتخاذ القرار.</small></div></div>
-            <div><span class="feature-icon">↗</span><div><strong>دعم بعد البيع</strong><small>فريقنا معك قبل الشراء وبعده.</small></div></div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="section reviews-section" id="reviews">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow dark"><span></span> تجارب حقيقية</p><h2>عملاؤنا <em>يتحدثون.</em></h2></div>
-          <p>ثقة عملائنا هي أكبر إنجاز نفخر به.</p>
-        </div>
-        <div class="reviews-grid">
-          <article class="review-card"><div class="stars">★★★★★</div><p>“تجربة ممتازة من أول مكالمة حتى استلام السيارة. كل التفاصيل كانت واضحة وفريق العمل متعاون جدًا.”</p><div class="review-person"><span class="person-avatar">ع</span><div><strong>عمر حسن</strong><small>اشترى سيارة SUV</small></div></div></article>
-          <article class="review-card featured-review"><div class="stars">★★★★★</div><p>“ساعدوني أوصل للاختيار المناسب لاحتياجاتي وميزانيتي. الخدمة احترافية والسيارة كانت مطابقة للوصف.”</p><div class="review-person"><span class="person-avatar">ن</span><div><strong>ندى محمد</strong><small>اشترت سيارة سيدان</small></div></div></article>
-          <article class="review-card"><div class="stars">★★★★★</div><p>“اهتمام بالتفاصيل ومصداقية في التعامل. بالتأكيد هرجع لهم في اختياري القادم.”</p><div class="review-person"><span class="person-avatar">م</span><div><strong>محمد علي</strong><small>عميل موتورز</small></div></div></article>
-        </div>
-      </div>
-    </section>
++
 
     <section class="contact-section" id="contact">
       <div class="container contact-layout">
@@ -151,6 +126,36 @@
     <div class="container footer-bottom"><span>© <span id="year"></span> موتورز. جميع الحقوق محفوظة.</span><span>صُمم لقيادة تجربتك إلى الأفضل.</span></div>
   </footer>
 
-  <a class="whatsapp-float" id="whatsappLink" href="#" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">☏</a>
+<a class="whatsapp-float" id="whatsappLink" href="#" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">☏</a>
+
+<!-- Car Details Modal -->
+<div class="car-modal" id="carModal" hidden>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalCarName">
+    <button class="modal-close" id="closeModal" aria-label="إغلاق">×</button>
+
+    <div class="modal-image" id="modalImage"></div>
+
+    <div class="modal-info">
+      <span class="modal-brand" id="modalBrand"></span>
+      <h2 id="modalCarName"></h2>
+      <p class="modal-price" id="modalPrice"></p>
+
+      <h3>مواصفات السيارة</h3>
+
+      <div class="modal-specs">
+        <div><span>سنة الصنع</span><strong id="modalYear"></strong></div>
+        <div><span>المحرك</span><strong id="modalEngine"></strong></div>
+        <div><span>ناقل الحركة</span><strong id="modalTransmission"></strong></div>
+        <div><span>الفئة</span><strong id="modalType"></strong></div>
+      </div>
+
+      <button class="btn btn-primary modal-quote" id="modalQuote">
+        اطلب عرض سعر ←
+      </button>
+    </div>
+  </div>
+</div>
+  
+
 </body>
 </html>
