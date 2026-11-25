@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="موتورز - اكتشف مجموعة مختارة من السيارات، قارن المواصفات والأسعار، واطلب عرض سعر أو احجز تجربة قيادة.">
+  <meta name="description" content="موتورز - اكتشف مجموعة مختارة من السيارات واطلب عرض سعر بسهولة عبر واتساب.">
   <meta name="theme-color" content="#101820">
   <meta property="og:type" content="website">
   <meta property="og:title" content="موتورز | اختَر سيارتك القادمة بثقة">
   <meta property="og:description" content="اكتشف سيارتك القادمة مع موتورز. تصفح السيارات وقارن المواصفات واطلب عرض سعر.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image" content="images/showroom.jpg">
   <meta property="og:locale" content="ar_EG">
   <title>موتورز | اختَر سيارتك القادمة بثقة</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-<script src="app.js?v=3" defer></script>
+  <script src="app.js?v=4" defer></script>
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -30,8 +30,8 @@
         <a href="#cars">السيارات</a>
         <a href="#about">لماذا نحن</a>
         <a href="#faq">الأسئلة الشائعة</a>
-        <a href="#reviews">آراء العملاء</a>
-        <a href="#contact" class="nav-cta">تواصل معنا</a>
+        <a href="#contact">اطلب عرض سعر</a>
+        <a href="#contact-details" class="nav-cta">تواصل معنا</a>
       </nav>
     </div>
   </header>
@@ -44,7 +44,7 @@
         <h1>قيادة مختلفة،<br><em>تبدأ من هنا.</em></h1>
         <p class="hero-copy">اكتشف مجموعة مختارة من السيارات التي تجمع بين الأداء والأناقة والراحة. سيارتك القادمة أقرب مما تتخيل.</p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">احجز تجربة قيادة <span>←</span></a>
+          <a href="#contact" class="btn btn-primary">اطلب عرض سعر <span>←</span></a>
           <a href="#cars" class="btn btn-outline">تصفح السيارات</a>
         </div>
       </div>
@@ -52,11 +52,9 @@
 
     <section class="quick-stats" aria-label="إحصائيات المعرض">
       <div class="container stats-grid">
-        <div><strong>+150</strong><span>سيارة متاحة</span></div>
-        <div><strong>+1,200</strong><span>عميل سعيد</span></div>
-        <div><strong>10+</strong><span>سنوات من الخبرة</span></div>
+        <div><strong>+1</strong><span>سنة من الخبرة</span></div>
+        <div><strong>50</strong><span>سيارة متاحة</span></div>
       </div>
-      <p class="stats-note">أرقام تجريبية للمعاينة — تُحدّث بالأرقام الفعلية للمعرض قبل النشر النهائي.</p>
     </section>
 
     <section class="section cars-section" id="cars">
@@ -75,12 +73,7 @@
           </label>
           <label>السعر
             <select id="priceFilter">
-              <option value="all">كل الأسعار</option>
-              <option value="under2">أقل من 2 مليون</option>
-              <option value="2to3">من 2 إلى 3 مليون</option>
-              <option value="3to4">من 3 إلى 4 مليون</option>
-              <option value="4to5">من 4 إلى 5 مليون</option>
-              <option value="over5">أكثر من 5 مليون</option>
+              <option value="all">كل الأسعار</option><option value="under2">أقل من 2 مليون</option><option value="2to3">من 2 إلى 3 مليون</option><option value="3to4">من 3 إلى 4 مليون</option><option value="4to5">من 4 إلى 5 مليون</option><option value="over5">أكثر من 5 مليون</option>
             </select>
           </label>
           <label>الترتيب
@@ -109,18 +102,17 @@
     <section class="feature-band" id="about">
       <div class="container feature-layout">
         <div class="feature-image reveal">
-          <div class="image-placeholder"><span>مساحة صورة صالة العرض</span><small>أضف صورة حقيقية للمعرض هنا</small></div>
+          <img src="images/Luxury.png" alt="صورة معرض موتورز" class="showroom-image">
         </div>
         <div class="feature-content reveal">
           <p class="eyebrow"><span></span> تجربة شراء مختلفة</p>
           <h2>اختيارك يستحق<br><em>اهتمامًا خاصًا.</em></h2>
           <p>نرافقك في كل خطوة، من اختيار السيارة المناسبة وحتى استلام المفاتيح، مع وضوح في المعلومات وخدمة تهتم بتجربتك.</p>
           <div class="features-list">
-            <div><span class="feature-icon">✓</span><div><strong>ضمان وفحص شامل</strong><small>تفاصيل الفحص والضمان تُوضح قبل إتمام الشراء.</small></div></div>
-            <div><span class="feature-icon">◇</span><div><strong>تقسيط وتمويل</strong><small>اسأل فريقنا عن برامج التمويل المتاحة وشروطها.</small></div></div>
-            <div><span class="feature-icon">↗</span><div><strong>خدمة ما بعد البيع</strong><small>دعم ومتابعة بعد استلام سيارتك.</small></div></div>
-            <div><span class="feature-icon">↔</span><div><strong>استبدال سيارتك القديمة</strong><small>استفسر عن إمكانية تقييم واستبدال سيارتك.</small></div></div>
-            <div><span class="feature-icon">i</span><div><strong>شفافية في تاريخ السيارة</strong><small>نوضح المعلومات والتقارير المتاحة عن كل سيارة.</small></div></div>
+            <div><span class="feature-icon">✓</span><div><strong>فحص شامل وشفافية</strong><small>كل عربية بتتفحص قبل العرض وبنوضحلك حالتها.</small></div></div>
+            <div><span class="feature-icon">◇</span><div><strong>تقسيط وتمويل</strong><small>بنساعدك تختار خطة مناسبة لميزانيتك.</small></div></div>
+            <div><span class="feature-icon">↗</span><div><strong>معاينة بموعد</strong><small>احجز موعد معاينة العربية عن طريق الواتساب.</small></div></div>
+            <div><span class="feature-icon">↔</span><div><strong>استبدال سيارتك القديمة</strong><small>بنقيّم عربيتك القديمة ونساعدك في الاستبدال.</small></div></div>
           </div>
         </div>
       </div>
@@ -130,29 +122,15 @@
       <div class="container">
         <div class="section-heading reveal">
           <div><p class="eyebrow dark"><span></span> إجابات سريعة</p><h2>أسئلة <em>شائعة.</em></h2></div>
-          <p>إجابات على أهم الأسئلة قبل زيارة المعرض أو طلب عرض سعر.</p>
+          <p>إجابات على أهم الأسئلة قبل طلب عرض سعر أو حجز موعد معاينة.</p>
         </div>
         <div class="faq-list reveal">
-          <details><summary>هل متاح تقسيط أو تمويل للسيارات؟</summary><p>قد تتوفر حلول تقسيط وتمويل حسب السيارة والجهة الممولة. تواصل معنا لمعرفة الشروط والتفاصيل الحالية.</p></details>
-          <details><summary>هل السيارات عليها ضمان؟</summary><p>الضمان ومدته وتغطيته تختلف من سيارة لأخرى. اطلب تفاصيل الضمان الخاص بالسيارة قبل إتمام الشراء.</p></details>
-          <details><summary>هل ممكن أعاين العربية وأجربها؟</summary><p>يمكنك التواصل معنا لتحديد موعد لمعاينة السيارة والاستفسار عن إمكانية تجربة القيادة.</p></details>
-          <details><summary>هل يمكن استبدال سيارتي القديمة؟</summary><p>تواصل مع فريقنا ببيانات سيارتك لمعرفة إمكانية التقييم والاستبدال.</p></details>
+          <details><summary>هل في تقسيط؟</summary><p>أيوه، متاح تقسيط وتمويل لأغلب العربيات، وبنساعدك تختار الخطة المناسبة لميزانيتك. ابعتلنا على الواتساب وهنوضحلك التفاصيل والأقساط.</p></details>
+          <details><summary>هل العربيات عليها ضمان؟</summary><p>كل عربية بتتفحص فحص شامل قبل العرض، وبنوضحلك حالتها بشفافية.</p></details>
+          <details><summary>ينفع أعاين العربية قبل ما أشتري؟</summary><p>أكيد، تقدر تحجز موعد معاينة عن طريق الواتساب، وإحنا بنرتبلك الميعاد المناسب.</p></details>
+          <details><summary>ينفع أبدل عربيتي القديمة؟</summary><p>أيوه، بنقيّم عربيتك القديمة ونساعدك تستبدلها بعربية جديدة من عندنا. ابعتلنا بياناتها وصورها وهنرد عليك بالتقييم.</p></details>
+          <details><summary>إزاي أطلب عرض سعر؟</summary><p>املأ الفورم في الموقع وهيتفتحلك واتساب برسالة جاهزة فيها بياناتك والعربية اللي اخترتها، وفريقنا هيرد عليك في أقرب وقت.</p></details>
         </div>
-      </div>
-    </section>
-
-    <section class="section reviews-section" id="reviews">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div><p class="eyebrow dark"><span></span> تجارب العملاء</p><h2>عملاؤنا <em>يتحدثون.</em></h2></div>
-          <p>نحرص على تقديم تجربة شراء واضحة ومريحة.</p>
-        </div>
-        <div class="reviews-grid reveal">
-          <article class="review-card"><div class="stars">★★★★★</div><p>“تجربة ممتازة من أول استفسار حتى استلام السيارة. التفاصيل كانت واضحة والتعامل محترم.”</p><div class="review-person"><span class="person-avatar">ع</span><div><strong>عميل تجريبي 1</strong><small>نموذج مؤقت للمراجعة</small></div></div></article>
-          <article class="review-card featured-review"><div class="stars">★★★★★</div><p>“ساعدوني في اختيار عربية مناسبة لاحتياجاتي، وكانت خطوات الشراء واضحة.”</p><div class="review-person"><span class="person-avatar">ن</span><div><strong>عميل تجريبي 2</strong><small>نموذج مؤقت للمراجعة</small></div></div></article>
-          <article class="review-card"><div class="stars">★★★★★</div><p>“اهتمام بالتفاصيل وسرعة في الرد على الاستفسارات. تجربة مريحة.”</p><div class="review-person"><span class="person-avatar">م</span><div><strong>عميل تجريبي 3</strong><small>نموذج مؤقت للمراجعة</small></div></div></article>
-        </div>
-        <p class="temporary-note">آراء تجريبية لتوضيح شكل القسم — يجب استبدالها بآراء حقيقية وموافق عليها قبل النشر.</p>
       </div>
     </section>
 
@@ -161,12 +139,12 @@
         <div class="contact-copy reveal">
           <p class="eyebrow"><span></span> خطوتك الأولى تبدأ الآن</p>
           <h2>جاهز تلاقي<br><em>سيارتك القادمة؟</em></h2>
-          <p>اترك بياناتك وسيتواصل معك فريقنا لمساعدتك في اختيار السيارة المناسبة أو ترتيب تجربة قيادة.</p>
-          <div class="contact-note"><span>✦</span> استشارة مجانية وبدون أي التزام بالشراء.</div>
+          <p>املأ بياناتك وسنتواصل معك عبر واتساب لمساعدتك في اختيار السيارة المناسبة أو ترتيب موعد للمعاينة.</p>
+          <div class="contact-note"><span>✦</span> الرد على الواتساب خلال مواعيد العمل.</div>
         </div>
         <form class="contact-form reveal" id="contactForm">
           <h3>اطلب عرض سعر</h3>
-          <p>املأ البيانات وسنتواصل معك قريبًا.</p>
+          <p>املأ البيانات وسيفتح واتساب برسالة جاهزة لفريقنا.</p>
           <label for="customerName">الاسم بالكامل</label>
           <input id="customerName" name="name" type="text" placeholder="مثال: أحمد محمد" autocomplete="name" required minlength="2">
           <label for="customerPhone">رقم الموبايل المصري</label>
@@ -177,24 +155,23 @@
           <label for="customerMessage">ملاحظات إضافية (اختياري)</label>
           <textarea id="customerMessage" name="message" rows="3" placeholder="موعد مناسب للتواصل أو أي تفاصيل إضافية"></textarea>
           <button class="btn btn-primary form-submit" type="submit">إرسال الطلب عبر واتساب <span>←</span></button>
-          <p class="form-message" id="formMessage" role="status" aria-live="polite">بعد الضغط على الإرسال ستظهر رسالة تأكيد، ثم يمكنك إرسال الطلب عبر واتساب.</p>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite">بعد الضغط على الإرسال هيفتح واتساب برسالة جاهزة؛ اضغط إرسال لتأكيد الطلب.</p>
         </form>
       </div>
     </section>
 
-    <section class="section contact-details-section">
+    <section class="section contact-details-section" id="contact-details">
       <div class="container">
         <div class="section-heading reveal">
-          <div><p class="eyebrow dark"><span></span> يسعدنا زيارتك</p><h2>تواصل مع <em>موتورز.</em></h2></div>
-          <p>بيانات المعرض ومواعيد العمل — يلزم استكمال البيانات الفعلية قبل النشر.</p>
+          <div><p class="eyebrow dark"><span></span> تواصل معنا أونلاين</p><h2>موتورز <em>دايمًا معاك.</em></h2></div>
+          <p>تواصل معنا عن طريق الواتساب أو التليفون أو صفحة فيسبوك.</p>
         </div>
         <div class="contact-details-grid reveal">
-          <article class="contact-detail"><span>⌖</span><div><strong>عنوان المعرض</strong><p id="showroomAddress">أضف عنوان المعرض الفعلي في ملف script.js</p></div></article>
-          <article class="contact-detail"><span>◷</span><div><strong>مواعيد العمل</strong><p id="showroomHours">أضف مواعيد العمل في ملف script.js</p></div></article>
-          <article class="contact-detail"><span>☎</span><div><strong>رقم الهاتف</strong><p id="showroomPhone">أضف رقم هاتف المعرض في ملف script.js</p></div></article>
-          <article class="contact-detail"><span>✉</span><div><strong>تابعنا</strong><p class="social-links"><a id="facebookLink" href="#" target="_blank" rel="noopener">فيسبوك</a><a id="instagramLink" href="#" target="_blank" rel="noopener">إنستجرام</a></p></div></article>
+          <article class="contact-detail"><span>◷</span><div><strong>مواعيد العمل</strong><p id="showroomHours"></p><small>الرد على الواتساب خلال مواعيد العمل.</small></div></article>
+          <article class="contact-detail"><span>☎</span><div><strong>اتصل بنا</strong><p><a id="showroomPhone" href="tel:+201550329383">01550329383</a></p></div></article>
+          <article class="contact-detail"><span>◉</span><div><strong>واتساب</strong><p><a id="contactWhatsapp" href="https://wa.me/201550329383" target="_blank" rel="noopener">راسلنا على واتساب</a></p></div></article>
+          <article class="contact-detail"><span>f</span><div><strong>تابعنا على فيسبوك</strong><p><a id="facebookLink" href="https://www.facebook.com/share/19d9WSTcMh/" target="_blank" rel="noopener">صفحة موتورز على فيسبوك</a></p></div></article>
         </div>
-        <div class="map-frame reveal" id="mapFrame"><div><strong>خريطة المعرض</strong><p>أضف رابط تضمين خريطة Google Maps في إعدادات script.js لعرض الموقع هنا.</p></div></div>
       </div>
     </section>
   </main>
@@ -208,17 +185,15 @@
     <div class="container footer-bottom"><span>© <span id="year"></span> موتورز. جميع الحقوق محفوظة.</span><span>صُمم لقيادة تجربتك إلى الأفضل.</span></div>
   </footer>
 
-  <a class="floating-contact floating-call" id="callLink" href="#" aria-label="اتصل بالمعرض">☎</a>
-  <a class="floating-contact floating-whatsapp" id="whatsappLink" href="#" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">◉</a>
+  <a class="floating-contact floating-call" id="callLink" href="tel:+201550329383" aria-label="اتصل بالمعرض">☎</a>
+  <a class="floating-contact floating-whatsapp" id="whatsappLink" href="https://wa.me/201550329383" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">◉</a>
 
   <div class="modal-backdrop" id="carModal" aria-hidden="true">
     <section class="car-modal" role="dialog" aria-modal="true" aria-labelledby="modalCarName">
       <button class="modal-close" id="closeModal" aria-label="إغلاق">×</button>
       <div class="modal-image" id="modalImage"></div>
       <div class="modal-content">
-        <p class="car-brand" id="modalBrand"></p>
-        <h2 id="modalCarName"></h2>
-        <p class="modal-price" id="modalPrice"></p>
+        <p class="car-brand" id="modalBrand"></p><h2 id="modalCarName"></h2><p class="modal-price" id="modalPrice"></p>
         <div class="modal-spec-grid" id="modalSpecs"></div>
         <button class="btn btn-primary" id="modalQuote" type="button">اطلب عرض سعر لهذه السيارة</button>
       </div>
@@ -228,8 +203,7 @@
   <div class="modal-backdrop compare-backdrop" id="compareModal" aria-hidden="true">
     <section class="compare-modal" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
       <button class="modal-close" id="closeCompare" aria-label="إغلاق">×</button>
-      <h2 id="compareTitle">مقارنة السيارات</h2>
-      <div id="compareTableWrap"></div>
+      <h2 id="compareTitle">مقارنة السيارات</h2><div id="compareTableWrap"></div>
     </section>
   </div>
 </body>
