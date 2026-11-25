@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "brand": "Chevrolet",
+    "name": "Chevrolet Optra",
+    "year": 2027,
+    "price": 780000,
+    "engine": "1.5L",
+    "transmission": "Automatic",
+    "type": "Sedan",
+    "image": "Images/chev.webp"
+  },
+  {
+    "id": 2,
+    "brand": "Toyota",
+    "name": "Toyota Sequoia TRD PRO",
+    "year": 2025,
+    "price": 12000000,
+    "engine": "3.5L",
+    "transmission": "Automatic",
+    "type": "SUV",
+    "image": "Images/toyota.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "Mercedes-Benz",
+    "name": "Mercedes-Benz C180",
+    "year": 2020,
+    "price": 2050000,
+    "engine": "1.5L",
+    "transmission": "Automatic",
+    "type": "Sedan",
+    "image": "Images/merc2.webp"
+  },
+  {
+    "id": 4,
+    "brand": "MG",
+    "name": "MG HS",
+    "year": 2022,
+    "price": 1050000,
+    "engine": "1.5L",
+    "transmission": "Automatic",
+    "type": "SUV",
+    "image": "Images/mg.webp"
+  },
+  {
+    "id": 5,
+    "brand": "Mercedes-Benz",
+    "name": "Mercedes-AMG GLC 43",
+    "year": 2026,
+    "price": 7300000,
+    "engine": "2.0L",
+    "transmission": "Automatic",
+    "type": "SUV",
+    "image": "Images/output-image.webp"
+  },
+  {
+    "id": 6,
+    "brand": "MG",
+    "name": "MG 5",
+    "year": 2022,
+    "price": 850000,
+    "engine": "1.5L",
+    "transmission": "Automatic",
+    "type": "Sedan",
+    "image": "Images/mg2.webp"
+  },
+  {
+    "id": 7,
+    "brand": "Volkswagen",
+    "name": "Volkswagen Tiguan R-Line",
+    "year": 2024,
+    "price": 2200000,
+    "engine": "1.4L",
+    "transmission": "Automatic",
+    "type": "SUV",
+    "image": "Images/volks.webp"
+  },
+  {
+    "id": 8,
+    "brand": "BMW",
+    "name": "BMW 320i",
+    "year": 2020,
+    "price": 2400000,
+    "engine": "2.0L",
+    "transmission": "Automatic",
+    "type": "Sedan",
+    "image": "Images/bmw.jpg"
+  },
+  {
+    "id": 9,
+    "brand": "Renault",
+    "name": "Renault Duster",
+    "year": 2018,
+    "price": 535000,
+    "engine": "1.5L",
+    "transmission": "Automatic",
+    "type": "SUV",
+    "image": "Images/renault.jpg"
+  }
+]
